@@ -1,0 +1,155 @@
+\doxysection{main.\+Application Class Reference}
+\hypertarget{classmain_1_1_application}{}\label{classmain_1_1_application}\index{main.Application@{main.Application}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmain_1_1_application_acce8ed01a85d88f9f71c173748598ba5}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\item 
+\mbox{\hyperlink{classmain_1_1_application_a82017f0e3fe3ac9d91b70148a95ab86b}{run}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classmain_1_1_application_a7e267f6f463d25d557e9637dcfcfc3ed}\label{classmain_1_1_application_a7e267f6f463d25d557e9637dcfcfc3ed} 
+{\bfseries app} = Qt\+Widgets.\+QApplication(sys.\+argv)
+\item 
+\Hypertarget{classmain_1_1_application_a21d7bd29cc3061d966b0484c8f1cf580}\label{classmain_1_1_application_a21d7bd29cc3061d966b0484c8f1cf580} 
+{\bfseries main\+\_\+window} = Qt\+Widgets.\+QMain\+Window()
+\item 
+\Hypertarget{classmain_1_1_application_a0ba3138ad9a1802a93438cbcad1c4e11}\label{classmain_1_1_application_a0ba3138ad9a1802a93438cbcad1c4e11} 
+{\bfseries ui} = \mbox{\hyperlink{classqt__design_1_1_ui___main_window}{Ui\+\_\+\+Main\+Window}}()
+\item 
+\Hypertarget{classmain_1_1_application_a34624e4bfe07f3bdd31eed548fab6017}\label{classmain_1_1_application_a34624e4bfe07f3bdd31eed548fab6017} 
+{\bfseries data\+\_\+loader} = Data\+Loader()
+\item 
+\Hypertarget{classmain_1_1_application_ac09f888924ab1aaaa49f792c9e80378b}\label{classmain_1_1_application_ac09f888924ab1aaaa49f792c9e80378b} 
+{\bfseries clustering\+\_\+service} = Clustering\+Service()
+\item 
+\Hypertarget{classmain_1_1_application_af1d8266ad866662825ad63ed7a97f3a1}\label{classmain_1_1_application_af1d8266ad866662825ad63ed7a97f3a1} 
+{\bfseries heuristic\+\_\+service} = Heuristic\+Service()
+\item 
+\Hypertarget{classmain_1_1_application_a62e4bc273444ccccb5f9966c55891b43}\label{classmain_1_1_application_a62e4bc273444ccccb5f9966c55891b43} 
+{\bfseries initial\+\_\+cmd\+\_\+mgr} = \mbox{\hyperlink{classundo__redo_1_1_command_manager}{Command\+Manager}}()
+\item 
+\Hypertarget{classmain_1_1_application_ace83d3be6c17648e83315b91b60eab3a}\label{classmain_1_1_application_ace83d3be6c17648e83315b91b60eab3a} 
+{\bfseries final\+\_\+cmd\+\_\+mgr} = \mbox{\hyperlink{classundo__redo_1_1_command_manager}{Command\+Manager}}()
+\item 
+\Hypertarget{classmain_1_1_application_aebb4ddf0693da76ffa9ea1db710b5c67}\label{classmain_1_1_application_aebb4ddf0693da76ffa9ea1db710b5c67} 
+{\bfseries initial\+\_\+solution} = None
+\item 
+\Hypertarget{classmain_1_1_application_a852031a8c842e79436ea85875578108b}\label{classmain_1_1_application_a852031a8c842e79436ea85875578108b} 
+{\bfseries final\+\_\+solution} = None
+\item 
+\Hypertarget{classmain_1_1_application_ae5a0b28ad714abfe07250c5b67a82cbc}\label{classmain_1_1_application_ae5a0b28ad714abfe07250c5b67a82cbc} 
+{\bfseries canvas\+Initial} = Figure\+Canvas(fig1)
+\item 
+\Hypertarget{classmain_1_1_application_ad70963db0dd09eaa2520dc75ff575ee1}\label{classmain_1_1_application_ad70963db0dd09eaa2520dc75ff575ee1} 
+{\bfseries canvas\+Final} = Figure\+Canvas(fig2)
+\item 
+\mbox{\hyperlink{classmain_1_1_application_a3b5ad05975283b20cb5da7a00341127f}{file\+\_\+controller}}
+\item 
+\mbox{\hyperlink{classmain_1_1_application_a7aa7437ac14b9b211b22ce152a7eb482}{edit\+\_\+controller}}
+\item 
+\mbox{\hyperlink{classmain_1_1_application_a599c92fe15747dfa5c1b20a7f0808de5}{clustering\+\_\+controller}}
+\item 
+\mbox{\hyperlink{classmain_1_1_application_a3d08cd9f162537c160f3c6f91c632667}{heuristic\+\_\+controller}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@class Application
+@brief Manages the overall application flow and user interface.
+
+The `Application` class sets up the PyQt5 application, the main window, the required models and services, 
+and initializes the controllers for file management, editing, clustering, and heuristic operations. It also 
+embeds the Matplotlib canvases for plotting data.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classmain_1_1_application_acce8ed01a85d88f9f71c173748598ba5}\index{main.Application@{main.Application}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!main.Application@{main.Application}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classmain_1_1_application_acce8ed01a85d88f9f71c173748598ba5} 
+main.\+Application.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Initializes the application, the main window, and all required services and controllers.
+
+This constructor sets up the PyQt5 main window, the models (such as the data loader, clustering service, and heuristic service), 
+the command managers (for managing the history of operations), and the controllers for file handling, editing, clustering, 
+and heuristics. Additionally, it prepares the Matplotlib canvases for displaying clustering results.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmain_1_1_application_a82017f0e3fe3ac9d91b70148a95ab86b}\index{main.Application@{main.Application}!run@{run}}
+\index{run@{run}!main.Application@{main.Application}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \label{classmain_1_1_application_a82017f0e3fe3ac9d91b70148a95ab86b} 
+main.\+Application.\+run (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Starts the PyQt5 application and displays the main window.
+
+This method starts the PyQt5 event loop and shows the main application window. It waits for user interactions 
+and handles application events until the user closes the window.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classmain_1_1_application_a599c92fe15747dfa5c1b20a7f0808de5}\index{main.Application@{main.Application}!clustering\_controller@{clustering\_controller}}
+\index{clustering\_controller@{clustering\_controller}!main.Application@{main.Application}}
+\doxysubsubsection{\texorpdfstring{clustering\_controller}{clustering\_controller}}
+{\footnotesize\ttfamily \label{classmain_1_1_application_a599c92fe15747dfa5c1b20a7f0808de5} 
+main.\+Application.\+clustering\+\_\+controller}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ ClusteringController(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ self.ui,\ self.clustering\_service,\ self,\ self.initial\_cmd\_mgr}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ )}
+
+\end{DoxyCode}
+\Hypertarget{classmain_1_1_application_a7aa7437ac14b9b211b22ce152a7eb482}\index{main.Application@{main.Application}!edit\_controller@{edit\_controller}}
+\index{edit\_controller@{edit\_controller}!main.Application@{main.Application}}
+\doxysubsubsection{\texorpdfstring{edit\_controller}{edit\_controller}}
+{\footnotesize\ttfamily \label{classmain_1_1_application_a7aa7437ac14b9b211b22ce152a7eb482} 
+main.\+Application.\+edit\+\_\+controller}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ EditController(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ self.ui,\ self,\ self.initial\_cmd\_mgr,\ self.final\_cmd\_mgr}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ )}
+
+\end{DoxyCode}
+\Hypertarget{classmain_1_1_application_a3b5ad05975283b20cb5da7a00341127f}\index{main.Application@{main.Application}!file\_controller@{file\_controller}}
+\index{file\_controller@{file\_controller}!main.Application@{main.Application}}
+\doxysubsubsection{\texorpdfstring{file\_controller}{file\_controller}}
+{\footnotesize\ttfamily \label{classmain_1_1_application_a3b5ad05975283b20cb5da7a00341127f} 
+main.\+Application.\+file\+\_\+controller}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ FileController(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ self.ui,\ self.data\_loader,\ self,\ self.initial\_cmd\_mgr}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ )}
+
+\end{DoxyCode}
+\Hypertarget{classmain_1_1_application_a3d08cd9f162537c160f3c6f91c632667}\index{main.Application@{main.Application}!heuristic\_controller@{heuristic\_controller}}
+\index{heuristic\_controller@{heuristic\_controller}!main.Application@{main.Application}}
+\doxysubsubsection{\texorpdfstring{heuristic\_controller}{heuristic\_controller}}
+{\footnotesize\ttfamily \label{classmain_1_1_application_a3d08cd9f162537c160f3c6f91c632667} 
+main.\+Application.\+heuristic\+\_\+controller}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ HeuristicController(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ self.ui,\ self.heuristic\_service,\ self,\ self.final\_cmd\_mgr}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ )}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+main.\+py\end{DoxyCompactItemize}

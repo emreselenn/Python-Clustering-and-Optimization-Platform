@@ -1,0 +1,91 @@
+\doxysection{undo\+\_\+redo.\+Command\+Manager Class Reference}
+\hypertarget{classundo__redo_1_1_command_manager}{}\label{classundo__redo_1_1_command_manager}\index{undo\_redo.CommandManager@{undo\_redo.CommandManager}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classundo__redo_1_1_command_manager_a4ff7464ba08f91d751ee05f450095ee5}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\item 
+\mbox{\hyperlink{classundo__redo_1_1_command_manager_a95b1e6dfae7188e03fa1f803090f5023}{do}} (self, \mbox{\hyperlink{classundo__redo_1_1_command}{Command}} command)
+\item 
+\mbox{\hyperlink{classundo__redo_1_1_command_manager_af80e68c997ffef6e95fb174d98e47c3f}{undo}} (self)
+\item 
+\mbox{\hyperlink{classundo__redo_1_1_command_manager_a644d2171c1a2bef974de3bf6e149c4d6}{redo}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classundo__redo_1_1_command_manager_a93a30c53d982683f73ac3693ebfc2fbc}\label{classundo__redo_1_1_command_manager_a93a30c53d982683f73ac3693ebfc2fbc} 
+list {\bfseries history} = \mbox{[}$\,$\mbox{]}
+\item 
+\Hypertarget{classundo__redo_1_1_command_manager_a4c36c08beabb80d1846da66fb4e9f2a0}\label{classundo__redo_1_1_command_manager_a4c36c08beabb80d1846da66fb4e9f2a0} 
+int {\bfseries pointer} = -\/1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}! @class CommandManager
+! @brief Manages undo/redo stacks of Command instances.
+
+The `CommandManager` class is responsible for managing a stack of commands and providing 
+undo/redo functionality. It maintains the history of commands and allows users to undo or redo actions.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classundo__redo_1_1_command_manager_a4ff7464ba08f91d751ee05f450095ee5}\index{undo\_redo.CommandManager@{undo\_redo.CommandManager}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!undo\_redo.CommandManager@{undo\_redo.CommandManager}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classundo__redo_1_1_command_manager_a4ff7464ba08f91d751ee05f450095ee5} 
+undo\+\_\+redo.\+Command\+Manager.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}! @brief Initializes the CommandManager instance.
+
+The constructor initializes an empty history stack and sets the pointer to -1.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classundo__redo_1_1_command_manager_a95b1e6dfae7188e03fa1f803090f5023}\index{undo\_redo.CommandManager@{undo\_redo.CommandManager}!do@{do}}
+\index{do@{do}!undo\_redo.CommandManager@{undo\_redo.CommandManager}}
+\doxysubsubsection{\texorpdfstring{do()}{do()}}
+{\footnotesize\ttfamily \label{classundo__redo_1_1_command_manager_a95b1e6dfae7188e03fa1f803090f5023} 
+undo\+\_\+redo.\+Command\+Manager.\+do (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{\mbox{\hyperlink{classundo__redo_1_1_command}{Command}}}]{command}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}! @brief Execute a new command and record it.
+
+This method executes a new command and stores it in the history stack. The history is trimmed 
+to remove any redoable commands that follow the current pointer.
+
+@param command: The command to be executed.
+\end{DoxyVerb}
+ \Hypertarget{classundo__redo_1_1_command_manager_a644d2171c1a2bef974de3bf6e149c4d6}\index{undo\_redo.CommandManager@{undo\_redo.CommandManager}!redo@{redo}}
+\index{redo@{redo}!undo\_redo.CommandManager@{undo\_redo.CommandManager}}
+\doxysubsubsection{\texorpdfstring{redo()}{redo()}}
+{\footnotesize\ttfamily \label{classundo__redo_1_1_command_manager_a644d2171c1a2bef974de3bf6e149c4d6} 
+undo\+\_\+redo.\+Command\+Manager.\+redo (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}! @brief Redo the next command if available.
+
+This method re-executes the next undone command and moves the pointer forward in the history stack.
+If no command is available to redo, nothing happens.
+
+@throws IndexError: If no command is available to redo.
+\end{DoxyVerb}
+ \Hypertarget{classundo__redo_1_1_command_manager_af80e68c997ffef6e95fb174d98e47c3f}\index{undo\_redo.CommandManager@{undo\_redo.CommandManager}!undo@{undo}}
+\index{undo@{undo}!undo\_redo.CommandManager@{undo\_redo.CommandManager}}
+\doxysubsubsection{\texorpdfstring{undo()}{undo()}}
+{\footnotesize\ttfamily \label{classundo__redo_1_1_command_manager_af80e68c997ffef6e95fb174d98e47c3f} 
+undo\+\_\+redo.\+Command\+Manager.\+undo (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}! @brief Undo the last command if available.
+
+This method undoes the last executed command and moves the pointer backward in the history stack. 
+If no command is available to undo, nothing happens.
+
+@throws IndexError: If no command is available to undo.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+undo\+\_\+redo.\+py\end{DoxyCompactItemize}

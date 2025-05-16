@@ -1,0 +1,52 @@
+\doxysection{undo\+\_\+redo.\+Command Class Reference}
+\hypertarget{classundo__redo_1_1_command}{}\label{classundo__redo_1_1_command}\index{undo\_redo.Command@{undo\_redo.Command}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classundo__redo_1_1_command_a0623afcc8a2c2a708909a4474bfe0c5b}{execute}} (self)
+\item 
+\mbox{\hyperlink{classundo__redo_1_1_command_a25336dd8a33e30be7497fdaa6dd00691}{undo}} (self)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}! @class Command
+! @brief Abstract base for undoable/redoable commands.
+
+This is an abstract class that defines the interface for all undoable and redoable commands. 
+Each specific command class must implement the `execute()` and `undo()` methods.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classundo__redo_1_1_command_a0623afcc8a2c2a708909a4474bfe0c5b}\index{undo\_redo.Command@{undo\_redo.Command}!execute@{execute}}
+\index{execute@{execute}!undo\_redo.Command@{undo\_redo.Command}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily \label{classundo__redo_1_1_command_a0623afcc8a2c2a708909a4474bfe0c5b} 
+undo\+\_\+redo.\+Command.\+execute (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}! @brief Executes the command.
+
+This method is intended to perform the action of the command. It should be implemented by 
+each subclass to define the specific action of the command.
+
+@throws NotImplementedError: If not implemented by the subclass.
+\end{DoxyVerb}
+ \Hypertarget{classundo__redo_1_1_command_a25336dd8a33e30be7497fdaa6dd00691}\index{undo\_redo.Command@{undo\_redo.Command}!undo@{undo}}
+\index{undo@{undo}!undo\_redo.Command@{undo\_redo.Command}}
+\doxysubsubsection{\texorpdfstring{undo()}{undo()}}
+{\footnotesize\ttfamily \label{classundo__redo_1_1_command_a25336dd8a33e30be7497fdaa6dd00691} 
+undo\+\_\+redo.\+Command.\+undo (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}! @brief Undoes the command.
+
+This method undoes the action performed by the `execute()` method. It should be implemented by 
+each subclass to define the specific undo action of the command.
+
+@throws NotImplementedError: If not implemented by the subclass.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+undo\+\_\+redo.\+py\end{DoxyCompactItemize}
