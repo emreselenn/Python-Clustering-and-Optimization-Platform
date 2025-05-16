@@ -1,2 +1,35 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+
+
+# Exclude non-code files from GitHub language statistics
+*.png linguist-detectable=false
+*.jpg linguist-detectable=false
+*.jpeg linguist-detectable=false
+*.gif linguist-detectable=false
+*.svg linguist-detectable=false
+*.ico linguist-detectable=false
+
+*.pdf linguist-detectable=false
+*.ps linguist-detectable=false
+*.eps linguist-detectable=false
+
+*.html linguist-detectable=false
+*.css linguist-detectable=false
+*.js linguist-detectable=false
+*.ts linguist-detectable=false
+
+*.json linguist-detectable=false
+*.xml linguist-detectable=false
+*.yml linguist-detectable=false
+*.yaml linguist-detectable=false
+
+*.md linguist-detectable=false
+*.csv linguist-detectable=false
+*.xlsx linguist-detectable=false
+*.xls linguist-detectable=false
+*.docx linguist-detectable=false
+*.doc linguist-detectable=false
+
+# TeX override (kill it with fire 🔥)
+*.tex linguist-language=Text
+*.tex linguist-detectable=false
+**/*.tex linguist-detectable=false
